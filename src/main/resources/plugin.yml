@@ -1,0 +1,3 @@
+main: com.github.doka.dokalib.DokaLibPlugin
+name: Doka_Lib
+version: 1.0.0
