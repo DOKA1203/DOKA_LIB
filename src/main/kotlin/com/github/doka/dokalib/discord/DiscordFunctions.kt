@@ -1,6 +1,7 @@
 package com.github.doka.dokalib.discord
 
 import net.dv8tion.jda.api.JDA
+import net.dv8tion.jda.api.JDABuilder
 import net.dv8tion.jda.api.entities.Invite
 import org.json.simple.JSONObject
 import org.json.simple.parser.JSONParser

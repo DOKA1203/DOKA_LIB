@@ -1,10 +1,11 @@
 package com.github.doka.dokalib
 
 import com.github.doka.dokalib.events.DateChangeEvent
+import com.mrsweeter.dreamAPI.messages.advancement.AdvancementMessage
 import com.okkero.skedule.SynchronizationContext
 import com.okkero.skedule.schedule
 import org.bukkit.Bukkit
-import org.bukkit.event.EventHandler
+import org.bukkit.entity.Player
 import org.bukkit.event.Listener
 import org.bukkit.plugin.java.JavaPlugin
 import java.time.LocalDate
@@ -34,10 +35,16 @@ class DokaLibPlugin : JavaPlugin() , Listener{
                 yield()
             }
         }
-    }
 
-    @EventHandler
-    private fun dateChange(event: DateChangeEvent){
-        Bukkit.broadcastMessage("DATE CHANGED")
+        Bukkit.getScheduler().schedule(Instance){
+            Bukkit.broadcastMessage("0")
+            waitFor(20)
+            Bukkit.broadcastMessage("20")
+        }
+
     }
+}
+
+fun Player.sendToastMessage(id:String,title:String,icon:String){
+    AdvancementMessage(id,title,icon,DokaLibPlugin.Instance).showTo(this)
 }
