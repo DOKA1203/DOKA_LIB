@@ -10,7 +10,6 @@ import org.bukkit.event.Listener
 import org.bukkit.plugin.java.JavaPlugin
 import java.time.LocalDate
 
-
 class DokaLibPlugin : JavaPlugin() , Listener{
     companion object{
         lateinit var Instance:DokaLibPlugin
@@ -35,13 +34,6 @@ class DokaLibPlugin : JavaPlugin() , Listener{
                 yield()
             }
         }
-
-        Bukkit.getScheduler().schedule(Instance){
-            Bukkit.broadcastMessage("0")
-            waitFor(20)
-            Bukkit.broadcastMessage("20")
-        }
-
     }
 }
 
